@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <title>UFO Finder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cyborg/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">UFO Sightings
@@ -21,7 +21,7 @@
         </div>
       </div>
     </nav>
-    <div class="hero text-center">
+    <div class="hero text-center" style="padding-top: 8%;">
       <h1>UFO Sightings</h1>
     </div>
     <div class="container">
@@ -32,15 +32,37 @@
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
                 <form>
-                  <div class="form-group">
+                  <div class="form-group" autocomplete="off">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <input list="datetime_list" id="datetime" type="text">
+                        <datalist id="datetime_list"></datalist>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="city">Enter a City</label>
+                        <input list="city_list" id="city" type="text">
+                        <datalist id="city_list"></datalist>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="state">Enter a State</label>
+                        <input list="state_list" id="state" type="text">
+                        <datalist id="state_list"></datalist>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="country">Enter a Country</label>
+                        <input list="country_list" id="country" type="text">
+                        <datalist id="country_list"></datalist>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="shape">Enter a Shape</label>
+                        <input list="shape_list" id="shape" type="text">
+                        <datalist id="shape_list"></datalist>
                       </li>
                     </ul>
                   </div>
                   <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="clear-filter-btn" class="btn btn-default">Reset Filters</button>
                 </form>
               </div>
             </div>
@@ -66,10 +88,11 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+  <footer class="footer text-center">
+      <br>
+      <span class="top">Sheetal Bongale ©2020</span>
       <span class="bottom">UFO Sightings</span>
-    </footer>
-  </div>
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="static/js/data.js"></script>
   <script src="static/js/app.js"></script>
