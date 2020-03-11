@@ -3,7 +3,7 @@
 ![ufo sightings](static/images/ufo4.gif)
 
 ## Objective: 
-This challenge demonstrates creating an interactive webpage to display a table dynamically for the [UFO Sightings Data](static/js/data.js)allowing user to input their choice from the drop-down to filter the table data. 
+This challenge demonstrates creating an interactive webpage to display a table dynamically for the [UFO Sightings Data](static/js/data.js) allowing user to input their choice from the drop-down to filter the table data. 
 
 The JavaScript code lets the user to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
@@ -13,7 +13,7 @@ The JavaScript code lets the user to set multiple filters and search for UFO sig
   4. `country`
   5. `shape`
 
-## Languages used: 
+**Languages used:** 
 `JavaScript|  D3.js | HTML | CSS | Bootstrap`
 
 Find the rendered web page here ➡️ [UFO Sightings](https://sheetalbongale.github.io/Javascript-Challenge/)
